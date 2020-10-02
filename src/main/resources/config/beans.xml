@@ -1,0 +1,10 @@
+<beans>
+    <bean id="rateLimiter" class="com.erudev.design.creational.factory.di.RateLimiter">
+        <constructor-arg ref="redisCounter"/>
+    </bean>
+
+    <bean id="redisCounter" class="com.erudev.design.creational.factory.di.RedisCounter">
+        <constructor-arg type="String" value="127.0.0.1" />
+        <constructor-arg type="String" value="1234" />
+    </bean>
+</beans>
